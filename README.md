@@ -55,8 +55,8 @@ Print out the body of all tweets associated with posts query from wordpress.
 Print out the body of all tweets associated with posts query from php.
 
 ```
-<?php echo do_shortcode('[igram_srch limit=5]{{twtr_content}}[/igram_srch]'); ?>
-<?php echo do_shortcode('[igram_srch date="Y-M-D"]{{twtr_content}}[/igram_srch]'); ?>
+<?php echo do_shortcode('[igram_srch limit=5]<img src="{{igram_thumbnail}}" alt="" />[/igram_srch]'); ?>
+<?php echo do_shortcode('[igram_srch date="Y-M-D"]<img src="{{igram_thumbnail}}" alt="" />[/igram_srch]'); ?>
 ```
 
 ###Changelog
