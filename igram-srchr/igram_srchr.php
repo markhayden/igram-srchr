@@ -54,7 +54,7 @@ function igramSiteURL(){
     return $protocol.$domainName;
 }
 
-function format_shortcode( $atts, $content="" ) {
+function igramFormat_shortcode( $atts, $content="" ) {
 	$igram_query_raw = get_post_meta( get_the_ID(), 'igram_search_query');
 	$igram_site_url = igramSiteURL();
 
@@ -74,7 +74,7 @@ function format_shortcode( $atts, $content="" ) {
 	return $igram_class->igram_srch_func( $wpdb, $table_prefix, $atts, $content );
 }
 
-add_shortcode('igram_srch', 'format_shortcode');
+add_shortcode('igram_srch', 'igramFormat_shortcode');
 
 /*----------------------------------------------------------------------------*
  * Dashboard and Administrative Functionality
