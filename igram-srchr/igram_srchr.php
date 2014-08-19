@@ -48,7 +48,7 @@ add_action( 'plugins_loaded', array( 'igram_srchr', 'get_instance' ) );
 // Load the class files to manage custom instagram handle field on posts.
 include('includes/igram-srch-formattr.php');
 
-function siteURL(){
+function igramSiteURL(){
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
     $domainName = $_SERVER['HTTP_HOST'].'/';
     return $protocol.$domainName;
@@ -56,7 +56,7 @@ function siteURL(){
 
 function format_shortcode( $atts, $content="" ) {
 	$igram_query_raw = get_post_meta( get_the_ID(), 'igram_search_query');
-	$igram_site_url = siteURL();
+	$igram_site_url = igramSiteURL();
 
 	// determine if the tweets need to be pulled in
 	$curl = curl_init();
